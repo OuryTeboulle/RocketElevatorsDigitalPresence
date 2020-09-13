@@ -50,9 +50,7 @@
 		boxed 					= boxed layout
 		pattern1 ... patern11	= pattern background
 		menu-vertical-hide		= hidden, open on click
-		
-		BACKGROUND IMAGE [together with .boxed class]
-		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	
 	-->
 	<body class="smoothscroll enable-animation">
 
@@ -239,9 +237,9 @@
 										<div class="col-md-4">
 										    <label for="selection_product_line">Please, select the product line: </label>
 					
-					                        <input onclick='radioFunction()' type="radio" class="radios" name="product_liner" value="standard" id="standard"> Standard<br>
-				                         	<input onclick='radioFunction()' type="radio" class="radios" name="product_liner" value="premium" id="premium"> Premium<br>
-			                        		<input onclick='radioFunction()' type="radio" class="radios" name="product_liner" value="excelium" id="excelium"> Excelium<br>
+					                        <input onchange='radioFunction()' type="radio" class="radios" name="product_liner" value="standard" id="standard"> Standard<br>
+				                         	<input onchange='radioFunction()' type="radio" class="radios" name="product_liner" value="premium" id="premium"> Premium<br>
+			                        		<input onchange='radioFunction()' type="radio" class="radios" name="product_liner" value="excelium" id="excelium"> Excelium<br>
 									
 										</div>
 									</div><br>
@@ -259,12 +257,12 @@
 											
 										<div class="col-md-4">
 												<label for="apartments_residential">Number of apartments in the building: </label>
-										        <input onchange="residentialQuote" required type="number" value="" class="form-control" name="apartments_residential" id="apartments_residential" min="1">
+										        <input required type="number" value="" class="form-control" name="apartments_residential" id="apartments_residential" min="1">
 										</div>
 
 										<div class="col-md-4">
 												<label for="floors_residential">Number of floors in the building: </label>
-							                    <input onchange="residentialQuote" required type="number" value="" class="form-control" name="floors_residential" id="floors_residential" min="1">
+							                    <input required type="number" value="" class="form-control" name="floors_residential" id="floors_residential" min="1">
 										</div>
 
 										<div class="col-md-4">
@@ -279,7 +277,7 @@
 									
 										<div class="col-md-4">
 												<label for="elevator_commercial_need">Number of elevators necessary: </label>
-												<input onchange="residentialQuote" required type="number" value=""class="form-control" name="elevator_commercial_need" id="elevator_commercial_need" readonly>
+												<input required type="number" value=""class="form-control" name="elevator_commercial_need" id="elevator_commercial_need" readonly>
 										</div>
 									</div><br><hr /><br>
 								</div>
@@ -319,7 +317,7 @@
 									
 									<div class="col-md-4">
 										<label for="elevator_commercial">Number of elevator cages to be deployed </label>
-										<input onchange="commercialQuote()" required type="number" value="" class="form-control" name="elevator_commercial" id="elevator_commercial" min="1">
+										<input required type="number" value="" class="form-control" name="elevator_commercial" id="elevator_commercial" min="1">
 									</div>
 
 									<div class="col-md-4">
@@ -346,7 +344,7 @@
 									
 									<div class="col-md-4">
 								     	<label for="basements_building">Number of basements in the building: </label>		
-								        <input onchange="corporateQuote" type="number" value="" class="form-control" name="basements_building" id="basements_building" min="1">
+								        <input type="number" value="" class="form-control" name="basements_building" id="basements_building" min="1">
 									</div>
 									
                                 </div>
@@ -360,12 +358,12 @@
 									
 									<div class="col-md-4">
 									    <label for="occupants_corporate">Maximum number of occupants per floor: </label>
-								        <input onchange="corporateQuote" required type="number" value="" class="form-control" name="occupants_corporate" id="occupants_corporate" min="1">
+								        <input required type="number" value="" class="form-control" name="occupants_corporate" id="occupants_corporate" min="1">
 									</div>	
 									
 									<div class="col-md-4">
 									    <label for="elevator_corporate_need">Number of elevators necessary: </label>
-						            	<input required type="number" value="elevator_corporate_need" class="form-control" name="elevator_corporate_need" id="elevator_corporate_need" readonly>
+						            	<input required type="number" value="" class="form-control" name="elevator_corporate_need" id="elevator_corporate_need" readonly>
 									</div>
 								</div><br><hr /><br>
 								</div>
@@ -382,12 +380,12 @@
 
 									<div class="col-md-4">
 										<label for="floors_hybrid">Number of floors in the building: </label>
-							            <input onchange="hybridQuote" required type="number" value="" class="form-control" name="floors_hybrid" id="floors_hybrid" min="1">
+							            <input required type="number" value="" class="form-control" name="floors_hybrid" id="floors_hybrid" min="1">
 									</div>	 
 									
 									<div class="col-md-4">
 										<label for="basements_hybrid">Number of basements in the building: </label>
-										<input onchange="hybridQuote" type="number" value="" class="form-control" name="basements_hybrid" id="basements_hybrid" min="1">
+										<input type="number" value="" class="form-control" name="basements_hybrid" id="basements_hybrid" min="1">
 									</div>
 									
                                 </div>
@@ -401,7 +399,7 @@
 									
 									<div class="col-md-4">
 									    <label for="occupants_hybrid">Maximum number of occupants per floor: </label>
-							            <input onchange="hybridQuote" required type="number" value="" class="form-control" name="occupants_hybrid" id="occupants_hybrid" min="1">
+							            <input required type="number" value="" class="form-control" name="occupants_hybrid" id="occupants_hybrid" min="1">
 									</div>	
 									
 									<div class="col-md-4">
@@ -441,7 +439,7 @@
 									
 									<div class="col-md-4">
 										<label for="elevator_hybrid_need">Number of elevators necessary </label>
-							            <input onchange="hybridQuote" required type="number" value="elevator_hybrid_need" class="form-control" name="elevator_hybrid_need" id="elevator_hybrid_need" readonly>
+							            <input required type="number" value="" class="form-control" name="elevator_hybrid_need" id="elevator_hybrid_need" readonly>
 									</div>
 								</div><br><hr /><br>
 							</div>	
@@ -454,17 +452,17 @@
 											
 										<div class="col-md-4">
 												<label for="elevator_unit_price">Elevator unit price: </label>
-										        <input required type="number" value="cost_elevator_unit" class="form-control" name="elevator_unit_price" id="elevator_unit_price" readonly>
+										        <input required type="number" value="" class="form-control" name="elevator_unit_price" id="elevator_unit_price" readonly>
 										</div>
 
 										<div class="col-md-4">
-												<label for="cost_elevators">Cost of elevators: </label>
-							                    <input required type="number" value="cost_elevators" class="form-control" name="cost_elevators" id="cost_elevators" readonly>
+												<label for="elevator_cost">Elevators_cost </label>
+							                    <input required type="number" value="" class="form-control" name="elevator_cost" id="elevator_cost" readonly>
 										</div>
 
 										<div class="col-md-4">
-												<label for="installation_costs">Installation costs: </label>
-							                    <input  required type="number" value="installation_costs" class="form-control" name="installation_costs" id="installation_costs" readonly>
+												<label for="installation_cost">Installation cost: </label>
+							                    <input  required type="number" value="" class="form-control" name="installation_cost" id="installation_cost" readonly>
 										</div>
 									
 								    </div>
@@ -474,7 +472,7 @@
 									
 										<div class="col-md-4">
 												<label for="total_cost">Total cost: </label>
-												<input required type="number" value="total_cost"class="form-control" name="total_cost" id="total_cost" readonly>
+												<input required type="number" value=""class="form-control" name="total_cost" id="total_cost" readonly>
 										</div>
 									</div>
 								</div><br><br>
@@ -623,14 +621,10 @@
 		<!-- PAGELEVEL SCRIPTS -->
 		<script src="assets/js/contact.js"></script>
 
-		<!-- 
-			GMAP.JS 
-			http://hpneo.github.io/gmaps/
-		-->
-		<script src="//maps.google.com/maps/api/js?key=AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY"></script>
-		<script src="assets/plugins/gmaps.js"></script>
+		<!-- QUOTE SCRIPTS-->
 		<script src='assets/js/hide_and_show.js'></script>
-		</script>
+		<script src='assets/js/product_line_selector.js'></script>
+	
 
 	</body>
 </html>
