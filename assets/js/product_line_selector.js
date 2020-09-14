@@ -28,6 +28,19 @@ var exceliumInstallationResidential;
 var exceliumInstallationCostResidential;
 var exceliumTotalCostResidential;
 
+var standardCostCorporate;
+var standardInstallationCorporate;
+var standardInstallationCostCorporate;
+var standardTotalCostCorporate;
+var premiumCostCorporate;
+var premiumInstallationCorporate;
+var premiumInstallationCostCorporate;
+var premiumTotalCostCorporate;
+var exceliumCostCorporate;
+var exceliumInstallationCorporate;
+var exceliumInstallationCostCorporate;
+var exceliumTotalCostCorporate;
+
 var standardCostHybrid;
 var standardInstallationHybrid;
 var standardInstallationCostHybrid;
@@ -41,44 +54,52 @@ var exceliumInstallationHybrid;
 var exceliumInstallationCostHybrid;
 var exceliumTotalCostHybrid;
 
+commercialQuote = function(){};
+residentialQuote = function(){};
+corporateQuote = function(){};
+hybridQuote = function(){};
+
 function radioFunction() {
-    radio = document.getElementsByName("product_liner").value;
-    console.info("Hello");
-    if (radio == 'standard') {
+
+    if (document.getElementById('standard').checked) {
+        radio = document.getElementById('standard').value;
         range = 7565
         installation = 0.1
-        console.info("standard");
-       
+        
         if (type == 'commercial') {
             commercialQuote();
-            console.info("coucou");
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(standardCostCommercial);
             $("#installation_cost").val(standardInstallationCommercial);
             $("#total_cost").val(standardTotalCostCommercial);
+            
         } else if (type == 'residential') {
             residentialQuote();
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(standardCostResidential);
             $("#installation_cost").val(standardInstallationResidential);
             $("#total_cost").val(standardTotalCostResidential);
+
         } else if (type == 'corporate') {
             corporateQuote();
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(standardCostCorporate);
             $("#installation_cost").val(standardInstallationCorporate);
             $("#total_cost").val(standardTotalCostCorporate);
+
         } else if (type == 'hybrid') {
             hybridQuote();
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(standardCostHybrid);
             $("#installation_cost").val(standardInstallationHybrid);
             $("#total_cost").val(standardTotalCostHybrid);
-
         }
-    } else if (radio == 'premium') {
+            
+    } else if (document.getElementById('premium').checked) {
+        radio = document.getElementById('premium').value;
         range = 12345
         installation = 0.13
+        
         if (type == 'commercial') {
             commercialQuote();
             $("#elevator_unit_price").val(range);
@@ -105,29 +126,35 @@ function radioFunction() {
             $("#total_cost").val(premiumTotalCostHybrid);
 
         }
-    } else if (radio == 'excelium') {
+    } else if (document.getElementById('excelium').checked) {
+        radio = document.getElementById('excelium').value;
         range = 15400
         installation = 0.16
+        console.info(radio);
         if (type == 'commercial') {
             commercialQuote();
+            console.info("commercial");
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(exceliumCostCommercial);
             $("#installation_cost").val(exceliumInstallationCommercial);
             $("#total_cost").val(exceliumTotalCostCommercial);
         } else if (type == 'residential') {
             residentialQuote();
+            console.info("residential");
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(exceliumCostResidential);
             $("#installation_cost").val(exceliumInstallationResidential);
             $("#total_cost").val(exceliumTotalCostResidential);
         } else if (type == 'corporate') {
             corporateQuote();
+            console.info("corporate");
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(exceliumCostCorporate);
             $("#installation_cost").val(exceliumInstallationCorporate);
             $("#total_cost").val(exceliumTotalCostCorporate);
         } else if (type == 'hybrid') {
             hybridQuote();
+            console.info("hybrid");
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(exceliumCostHybrid);
             $("#installation_cost").val(exceliumInstallationHybrid);
@@ -136,54 +163,3 @@ function radioFunction() {
         }
     }
 }
-
-/* Commercial Quote */
-
-function commercialQuote() {
-    var commercialElevator = parseInt ($("#elevator_commercial").val());
-    $("#elevator_commercial_need").val(commercialElevator);
-
-    /* standard */
-
-    standardCostCommercial = commercialElevator * range;
-    standardInstallationCommercial = standardCostCommercial * installation;
-    standardInstallationCostCommercial = parseInt(standardInstallationCommercial.toFixed(2));
-    standardTotalCostCommercial = parseInt(standardCostCommercial + standardInstallationCostCommercial);
-
-    document.getElementById("elevator_unit_price").innerHTML = val(standardCostCommercial);
- document.getElementById("elevator_cost").innerHTML = val(standardInstallationCommercial);
- document.getElementById("installation_cost").innerHTML = val(standardInstallationCostCommercial);
- document.getElementById("total_cost").innerHTML = val(standardTotalCostCommercial);
-    /* Premium */
-
-    premiumCostCommercial = commercialElevator * range;
-    premiumInstallationCommercial = premiumCostCommercial * installation;
-    premiumInstallationCostCommercial = parseInt(premiumInstallationCommercial.toFixed(2));
-    premiumTotalCostCommercial = premiumCostCommercial + premiumInstallationCostCommercial;
-    console.log ("premiumInstallationCostCommercial " + typeof (premiumInstallationCostCommercial));
-    console.log ("premiumTotalCostCommercial " + typeof(premiumTotalCostCommercial) + " car range vaut " + typeof(range) );
-    
-    /* Excelium */
-
-    exceliumCostCommercial = commercialElevator * range;
-    exceliumInstallationCommercial = exceliumCostCommercial * installation;
-    exceliumInstallationCostCommercial = parseInt(exceliumInstallationCommercial.toFixed(2));
-    exceliumTotalCostCommercial = exceliumCostCommercial + exceliumInstallationCostCommercial;
- }
-
- document.getElementById("elevator_unit_price").innerHTML = val(standardCostCommercial);
- document.getElementById("elevator_cost").innerHTML = val(standardInstallationCommercial);
- document.getElementById("installation_cost").innerHTML = val(standardInstallationCostCommercial);
- document.getElementById("total_cost").innerHTML = val(standardTotalCostCommercial);
-
- document.getElementById("elevator_unit_price").innerHTML = val(premiumCostCommercial);
- document.getElementById("elevator_cost").innerHTML = val(premiumInstallationCommercial);
- document.getElementById("installation_cost").innerHTML = val(premiumInstallationCostCommercial);
- document.getElementById("total_cost").innerHTML = val(premiumTotalCostCommercial);
-
- document.getElementById("elevator_unit_price").innerHTML = val(exceliumCostCommercial);
- document.getElementById("elevator_cost").innerHTML = val(exceliumInstallationCommercial);
- document.getElementById("installation_cost").innerHTML = val(exceliumInstallationCostCommercial);
- document.getElementById("total_cost").innerHTML = val(exceliumTotalCostCommercial);
-
-
