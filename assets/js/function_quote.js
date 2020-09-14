@@ -1,5 +1,6 @@
-var range
-var installation
+var range;
+var installation;
+var radio;
 
 var standardCostCommercial;
 var standardInstallationCommercial;
@@ -27,6 +28,19 @@ var exceliumInstallationResidential;
 var exceliumInstallationCostResidential;
 var exceliumTotalCostResidential;
 
+var standardCostCorporate;
+var standardInstallationCorporate;
+var standardInstallationCostCorporate;
+var standardTotalCostCorporate;
+var premiumCostCorporate;
+var premiumInstallationCorporate;
+var premiumInstallationCostCorporate;
+var premiumTotalCostCorporate;
+var exceliumCostCorporate;
+var exceliumInstallationCorporate;
+var exceliumInstallationCostCorporate;
+var exceliumTotalCostCorporate;
+
 var standardCostHybrid;
 var standardInstallationHybrid;
 var standardInstallationCostHybrid;
@@ -38,53 +52,26 @@ var premiumTotalCostHybrid;
 var exceliumCostHybrid;
 var exceliumInstallationHybrid;
 var exceliumInstallationCostHybrid;
-var exceliumTotalCostHybrid; 
+var exceliumTotalCostHybrid;
 
-/*
+
 
 function commercialQuote() {
-    var commercialElevator = parseInt ($("#elevator_commercial").val());
+    console.info("FunctionCommercial");
+    commercialElevator = $("#elevator_commercial").val();
     $("#elevator_commercial_need").val(commercialElevator);
-
-  
-
+    console.info(commercialElevator);
+    
     standardCostCommercial = commercialElevator * range;
     standardInstallationCommercial = standardCostCommercial * installation;
-    standardInstallationCostCommercial = parseInt(standardInstallationCommercial.toFixed(2));
-    standardTotalCostCommercial = parseInt(standardCostCommercial + standardInstallationCostCommercial);
-
- document.getElementById("elevator_unit_price").innerHTML = val(standardCostCommercial);
- document.getElementById("elevator_cost").innerHTML = val(standardInstallationCommercial);
- document.getElementById("installation_cost").innerHTML = val(standardInstallationCostCommercial);
- document.getElementById("total_cost").innerHTML = val(standardTotalCostCommercial);
+    standardTotalCostCommercial = standardCostCommercial + standardInstallationCommercial;
     
 
     premiumCostCommercial = commercialElevator * range;
     premiumInstallationCommercial = premiumCostCommercial * installation;
-    premiumInstallationCostCommercial = parseInt(premiumInstallationCommercial.toFixed(2));
-    premiumTotalCostCommercial = premiumCostCommercial + premiumInstallationCostCommercial;
-    console.log ("premiumInstallationCostCommercial " + typeof (premiumInstallationCostCommercial));
-    console.log ("premiumTotalCostCommercial " + typeof(premiumTotalCostCommercial) + " car range vaut " + typeof(range) );
-    
-    
+    premiumTotalCostCommercial = premiumCostCommercial + premiumInstallationCommercial;
 
     exceliumCostCommercial = commercialElevator * range;
     exceliumInstallationCommercial = exceliumCostCommercial * installation;
-    exceliumInstallationCostCommercial = parseInt(exceliumInstallationCommercial.toFixed(2));
-    exceliumTotalCostCommercial = exceliumCostCommercial + exceliumInstallationCostCommercial;
- } */
-
- /* document.getElementById("elevator_unit_price").innerHTML = val(standardCostCommercial);
- document.getElementById("elevator_cost").innerHTML = val(standardInstallationCommercial);
- document.getElementById("installation_cost").innerHTML = val(standardInstallationCostCommercial);
- document.getElementById("total_cost").innerHTML = val(standardTotalCostCommercial);
-
- document.getElementById("elevator_unit_price").innerHTML = val(premiumCostCommercial);
- document.getElementById("elevator_cost").innerHTML = val(premiumInstallationCommercial);
- document.getElementById("installation_cost").innerHTML = val(premiumInstallationCostCommercial);
- document.getElementById("total_cost").innerHTML = val(premiumTotalCostCommercial);
-
- document.getElementById("elevator_unit_price").innerHTML = val(exceliumCostCommercial);
- document.getElementById("elevator_cost").innerHTML = val(exceliumInstallationCommercial);
- document.getElementById("installation_cost").innerHTML = val(exceliumInstallationCostCommercial);
- document.getElementById("total_cost").innerHTML = val(exceliumTotalCostCommercial); */
+    exceliumTotalCostCommercial = exceliumCostCommercial + exceliumInstallationCommercial;
+}

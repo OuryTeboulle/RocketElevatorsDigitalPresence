@@ -54,10 +54,7 @@ var exceliumInstallationHybrid;
 var exceliumInstallationCostHybrid;
 var exceliumTotalCostHybrid;
 
-commercialQuote = function(){};
-residentialQuote = function(){};
-corporateQuote = function(){};
-hybridQuote = function(){};
+
 
 function radioFunction() {
 
@@ -67,6 +64,7 @@ function radioFunction() {
         installation = 0.1
         
         if (type == 'commercial') {
+            console.info("commercial");
             commercialQuote();
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(standardCostCommercial);
@@ -130,31 +128,26 @@ function radioFunction() {
         radio = document.getElementById('excelium').value;
         range = 15400
         installation = 0.16
-        console.info(radio);
         if (type == 'commercial') {
             commercialQuote();
-            console.info("commercial");
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(exceliumCostCommercial);
             $("#installation_cost").val(exceliumInstallationCommercial);
             $("#total_cost").val(exceliumTotalCostCommercial);
         } else if (type == 'residential') {
             residentialQuote();
-            console.info("residential");
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(exceliumCostResidential);
             $("#installation_cost").val(exceliumInstallationResidential);
             $("#total_cost").val(exceliumTotalCostResidential);
         } else if (type == 'corporate') {
             corporateQuote();
-            console.info("corporate");
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(exceliumCostCorporate);
             $("#installation_cost").val(exceliumInstallationCorporate);
             $("#total_cost").val(exceliumTotalCostCorporate);
         } else if (type == 'hybrid') {
             hybridQuote();
-            console.info("hybrid");
             $("#elevator_unit_price").val(range);
             $("#elevator_cost").val(exceliumCostHybrid);
             $("#installation_cost").val(exceliumInstallationHybrid);
