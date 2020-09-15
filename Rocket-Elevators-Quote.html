@@ -242,6 +242,12 @@
 			                        		<input onchange='radioFunction()' type="radio" class="radios" name="product_liner" value="excelium" id="excelium"> Excelium<br>
 									
 										</div>
+
+										<div class="col-md-4">
+											<br><br>
+											<input type="button" value="refresh" id="refresh" />
+										</div>
+
 									</div><br>
 									<hr /><br>
 							
@@ -257,12 +263,12 @@
 											
 										<div class="col-md-4">
 												<label for="apartments_residential">Number of apartments in the building: </label>
-										        <input required type="number" value="" class="form-control" name="apartments_residential" id="apartments_residential" min="1">
+										        <input onchange='residentialQuote()' required type="number" value="" class="form-control" name="apartments_residential" id="apartments_residential" min="1">
 										</div>
 
 										<div class="col-md-4">
 												<label for="floors_residential">Number of floors in the building: </label>
-							                    <input required type="number" value="" class="form-control" name="floors_residential" id="floors_residential" min="1">
+							                    <input onchange='residentialQuote()' required type="number" value="" class="form-control" name="floors_residential" id="floors_residential" min="1">
 										</div>
 
 										<div class="col-md-4">
@@ -317,7 +323,7 @@
 									
 									<div class="col-md-4">
 										<label for="elevator_commercial">Number of elevator cages to be deployed </label>
-										<input required type="number" value="" class="form-control" name="elevator_commercial" id="elevator_commercial" min="1">
+										<input onchange='commercialQuote()' required type="number" value="" class="form-control" name="elevator_commercial" id="elevator_commercial" min="1">
 									</div>
 
 									<div class="col-md-4">
@@ -339,12 +345,12 @@
 
 									<div class="col-md-4">
 										<label for="floors_corporate">Number of floors in the building: </label>	
-										<input required type="number" value="" class="form-control" name="floors_corporate" id="floors_corporate" min="1">
+										<input onchange='corporateQuote()' required type="number" value="" class="form-control" name="floors_corporate" id="floors_corporate" min="1">
 									</div>	 
 									
 									<div class="col-md-4">
-								     	<label for="basements_building">Number of basements in the building: </label>		
-								        <input type="number" value="" class="form-control" name="basements_building" id="basements_building" min="1">
+								     	<label for="basements_corporate">Number of basements in the building: </label>		
+								        <input onchange='corporateQuote()' type="number" value="" class="form-control" name="basements_corporate" id="basements_corporate" min="1">
 									</div>
 									
                                 </div>
@@ -358,7 +364,7 @@
 									
 									<div class="col-md-4">
 									    <label for="occupants_corporate">Maximum number of occupants per floor: </label>
-								        <input required type="number" value="" class="form-control" name="occupants_corporate" id="occupants_corporate" min="1">
+								        <input onchange='corporateQuote()' required type="number" value="" class="form-control" name="occupants_corporate" id="occupants_corporate" min="1">
 									</div>	
 									
 									<div class="col-md-4">
@@ -380,12 +386,12 @@
 
 									<div class="col-md-4">
 										<label for="floors_hybrid">Number of floors in the building: </label>
-							            <input required type="number" value="" class="form-control" name="floors_hybrid" id="floors_hybrid" min="1">
+							            <input onchange='hybridQuote()' required type="number" value="" class="form-control" name="floors_hybrid" id="floors_hybrid" min="1">
 									</div>	 
 									
 									<div class="col-md-4">
 										<label for="basements_hybrid">Number of basements in the building: </label>
-										<input type="number" value="" class="form-control" name="basements_hybrid" id="basements_hybrid" min="1">
+										<input onchange='hybridQuote()' type="number" value="" class="form-control" name="basements_hybrid" id="basements_hybrid" min="1">
 									</div>
 									
                                 </div>
@@ -399,7 +405,7 @@
 									
 									<div class="col-md-4">
 									    <label for="occupants_hybrid">Maximum number of occupants per floor: </label>
-							            <input required type="number" value="" class="form-control" name="occupants_hybrid" id="occupants_hybrid" min="1">
+							            <input onchange='hybridQuote()' required type="number" value="" class="form-control" name="occupants_hybrid" id="occupants_hybrid" min="1">
 									</div>	
 									
 									<div class="col-md-4">
@@ -623,8 +629,7 @@
 
 		<!-- QUOTE SCRIPTS-->
 		<script src='assets/js/hide_and_show.js'></script>
-		<script src='assets/js/product_line_selector.js'></script>
-		<script src='assets/js/function_quote.js'></script>
+		<script src='assets/js/quote_form.js'></script>
 	
 
 	</body>
