@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function() {
     document.getElementById('residentialSelect').style.display = 'none';
     document.getElementById('commercialSelect').style.display = 'none';

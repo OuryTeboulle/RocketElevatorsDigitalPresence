@@ -58,11 +58,6 @@ var exceliumInstallationHybrid;
 var exceliumInstallationCostHybrid;
 var exceliumTotalCostHybrid;
 
-/* REFRESH BUTTON SCRIPT */
-
-$('#refresh').on('click', function() {
-    location.reload();
-});
 
 /* RADIO BUTTONS SCRIPT */
 
@@ -166,6 +161,101 @@ function radioFunction() {
     }
 }
 
+
+   
+   
+   $('#buildingType').change(function choice() {
+        $('#elevator_unit_price').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#elevator_cost').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#installation_cost').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#total_cost').val("");
+    });
+    
+    
+    
+    $('#buildingType').change(function choice() {
+        $('#apartments_residential').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#floors_residential').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#basements_residential').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#elevator_residential_need').val("");
+    });
+    
+    
+    $('#buildingType').change(function choice() {
+        $('#businesses_commercial').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#floors_commercial').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#basements_commercial').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#parking_commercial').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#elevator_commercial').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#elevator_commercial_need').val("");
+    });
+    
+    
+    $('#buildingType').change(function choice() {
+        $('#companies_corporate').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#floors_corporate').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#basements_corporate').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#parking_corporate').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#occupants_corporate').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#elevator_corporate_need').val("");
+    });
+    
+    
+    $('#buildingType').change(function choice() {
+        $('#businesses_hybrid').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#floors_hybrid').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#basements_hybrid').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#parking_hybrid').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#occupants_hybrid').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#hours_hybrid').val("");
+    });
+    $('#buildingType').change(function choice() {
+        $('#elevator_hybrid_need').val("");
+    });
+
+
 /* COMMERCIAL BUILDING QUOTE FUNCTION */
 
 function commercialQuote() {
@@ -176,7 +266,7 @@ function commercialQuote() {
 
     standardCostCommercial = commercialElevator * range;
     standardInstallationCommercial = standardCostCommercial * installation;
-    standardTotalCostCommercial = standardCostCommercial + standardInstallationCommercial;
+    standardTotalCostCommercial = standardCostCommercial + standardInstallationCommercial
     
     /* COMMERCIAL BUILDING QUOTE - PREMIUM */
 
