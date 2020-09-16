@@ -263,17 +263,17 @@
 											
 										<div class="col-md-4">
 												<label for="apartments_residential">Number of apartments in the building: </label>
-										        <input onchange='residentialQuote()' required type="number" value="" class="form-control" name="apartments_residential" id="apartments_residential" min="1">
+										        <input onchange='residentialQuote()' required type="number" value="" class="form-control" name="apartments_residential" id="apartments_residential" min="1" onkeypress="return isNumberKey(event)">
 										</div>
 
 										<div class="col-md-4">
 												<label for="floors_residential">Number of floors in the building: </label>
-							                    <input onchange='residentialQuote()' required type="number" value="" class="form-control" name="floors_residential" id="floors_residential" min="1">
+							                    <input onchange='residentialQuote()' required type="number" value="" class="form-control" name="floors_residential" id="floors_residential" min="1" onkeypress="return isNumberKey(event)">
 										</div>
 
 										<div class="col-md-4">
 												<label for="basements_residential">Number of basements in the building: </label>
-							                    <input  required type="number" value="" class="form-control" name="basements_residential" id="basements_residential" min="1">
+							                    <input  required type="number" value="" class="form-control" name="basements_residential" id="basements_residential" min="1" onkeypress="return isNumberKey(event)">
 										</div>
 									
 								    </div>
@@ -297,18 +297,18 @@
 										<div class="col-md-4">
 									
 											<label for="businesses_commercial">Number of distinct businesses: </label>
-											<input required type="number" value="" class="form-control" name="businesses_commercial" id="businesses_commercial" min="1">
+											<input required type="number" value="" class="form-control" name="businesses_commercial" id="businesses_commercial" min="1" onkeypress="return isNumberKey(event)">
 								        </div>
 
 									
 										<div class="col-md-4">
 										<label for="floors_commercial">Number of floors in the building: </label>						
-										<input required type="number" value="" class="form-control" name="floors_commercial" id="floors_commercial" min="1">
+										<input required type="number" value="" class="form-control" name="floors_commercial" id="floors_commercial" min="1" onkeypress="return isNumberKey(event)">
 									</div>
 
 									<div class="col-md-4">
 										<label for="basements_commercial">Number of basements in the building: </label>
-										<input required type="number" value="" class="form-control" name="basements_commercial" id="basements_commercial" min="1">
+										<input required type="number" value="" class="form-control" name="basements_commercial" id="basements_commercial" min="1" onkeypress="return isNumberKey(event)">
 									</div>
 								
 							    </div>
@@ -318,12 +318,12 @@
 									
 									<div class="col-md-4">
 										<label for="parking_commercial">Number of Parking spaces available: </label>
-										<input required type="number" value="" class="form-control" name="parking_commercial" id="parking_commercial" min="1">
+										<input required type="number" value="" class="form-control" name="parking_commercial" id="parking_commercial" min="1" onkeypress="return isNumberKey(event)">
 									</div>
 									
 									<div class="col-md-4">
 										<label for="elevator_commercial">Number of elevator cages to be deployed </label>
-										<input onchange='commercialQuote()' required type="number" value="" class="form-control" name="elevator_commercial" id="elevator_commercial" min="1">
+										<input onchange='commercialQuote()' required type="number" value="" class="form-control" name="elevator_commercial" id="elevator_commercial" min="1" onkeypress="return isNumberKey(event)">
 									</div>
 
 									<div class="col-md-4">
@@ -340,17 +340,17 @@
 											
 									<div class="col-md-4">
                                         <label for="companies_corporate">Number of separate tenant companies: </label>
-							            <input required type="number" value="" class="form-control" name="companies_corporate" id="companies_corporate" min="1">
+							            <input required type="number" value="" class="form-control" name="companies_corporate" id="companies_corporate" min="1" onkeypress="return isNumberKey(event)">
 									</div>
 
 									<div class="col-md-4">
 										<label for="floors_corporate">Number of floors in the building: </label>	
-										<input onchange='corporateQuote()' required type="number" value="" class="form-control" name="floors_corporate" id="floors_corporate" min="1">
+										<input onchange='corporateQuote()' required type="number" value="" class="form-control" name="floors_corporate" id="floors_corporate" min="1" onkeypress="return isNumberKey(event)">
 									</div>	 
 									
 									<div class="col-md-4">
 								     	<label for="basements_corporate">Number of basements in the building: </label>		
-								        <input onchange='corporateQuote()' type="number" value="" class="form-control" name="basements_corporate" id="basements_corporate" min="1">
+								        <input onchange='corporateQuote()' type="number" value="" class="form-control" name="basements_corporate" id="basements_corporate" min="1" onkeypress="return isNumberKey(event)">
 									</div>
 									
                                 </div>
@@ -359,12 +359,12 @@
 									
 									<div class="col-md-4">
 									    <label for="parking_corporate">Number of Parking spaces available: </label>
-								        <input required type="number" value="" class="form-control" name="parking_corporate" id="parking_corporate" min="1">
+								        <input required type="number" value="" class="form-control" name="parking_corporate" id="parking_corporate" min="1" onkeypress="return isNumberKey(event)">
 									</div>	
 									
 									<div class="col-md-4">
 									    <label for="occupants_corporate">Maximum number of occupants per floor: </label>
-								        <input onchange='corporateQuote()' required type="number" value="" class="form-control" name="occupants_corporate" id="occupants_corporate" min="1">
+								        <input onchange='corporateQuote()' required type="number" value="" class="form-control" name="occupants_corporate" id="occupants_corporate" min="1" onkeypress="return isNumberKey(event)">
 									</div>	
 									
 									<div class="col-md-4">
@@ -381,17 +381,17 @@
 											
 									<div class="col-md-4">
 										<label for="businesses_hybrid">Number of distinct businesses: </label>
-										<input required type="number" value="" class="form-control" name="businesses_hybrid" id="businesses_hybrid" min="1">
+										<input required type="number" value="" class="form-control" name="businesses_hybrid" id="businesses_hybrid" min="1" onkeypress="return isNumberKey(event)">
 									</div>
 
 									<div class="col-md-4">
 										<label for="floors_hybrid">Number of floors in the building: </label>
-							            <input onchange='hybridQuote()' required type="number" value="" class="form-control" name="floors_hybrid" id="floors_hybrid" min="1">
+							            <input onchange='hybridQuote()' required type="number" value="" class="form-control" name="floors_hybrid" id="floors_hybrid" min="1" onkeypress="return isNumberKey(event)">
 									</div>	 
 									
 									<div class="col-md-4">
 										<label for="basements_hybrid">Number of basements in the building: </label>
-										<input onchange='hybridQuote()' type="number" value="" class="form-control" name="basements_hybrid" id="basements_hybrid" min="1">
+										<input onchange='hybridQuote()' type="number" value="" class="form-control" name="basements_hybrid" id="basements_hybrid" min="1" onkeypress="return isNumberKey(event)">
 									</div>
 									
                                 </div>
@@ -400,12 +400,12 @@
 									
 									<div class="col-md-4">
 										<label for="parking_hybrid">Number of Parking spaces available: </label>
-										<input required type="number" value="" class="form-control" name="parking_hybrid" id="parking_hybrid" min="1">
+										<input required type="number" value="" class="form-control" name="parking_hybrid" id="parking_hybrid" min="1" onkeypress="return isNumberKey(event)">
 									</div>	
 									
 									<div class="col-md-4">
 									    <label for="occupants_hybrid">Maximum number of occupants per floor: </label>
-							            <input onchange='hybridQuote()' required type="number" value="" class="form-control" name="occupants_hybrid" id="occupants_hybrid" min="1">
+							            <input onchange='hybridQuote()' required type="number" value="" class="form-control" name="occupants_hybrid" id="occupants_hybrid" min="1" onkeypress="return isNumberKey(event)">
 									</div>	
 									
 									<div class="col-md-4">
@@ -458,17 +458,17 @@
 											
 										<div class="col-md-4">
 												<label for="elevator_unit_price">Elevator unit price: </label>
-										        <input required type="number" value="" class="form-control" name="elevator_unit_price" id="elevator_unit_price" min="1" readonly>
+										        <input value="" class="form-control" name="elevator_unit_price" id="elevator_unit_price" min="1" readonly>
 										</div>
 
 										<div class="col-md-4">
 												<label for="elevator_cost">Elevators_cost </label>
-							                    <input required type="number" value="" class="form-control" name="elevator_cost" id="elevator_cost" rmin="1" eadonly>
+							                    <input value="" class="form-control" name="elevator_cost" id="elevator_cost" min="1" readonly>
 										</div>
 
 										<div class="col-md-4">
 												<label for="installation_cost">Installation cost: </label>
-							                    <input  required type="number" value="" class="form-control" name="installation_cost" id="installation_cost" min="1" readonly>
+							                    <input value="" class="form-control" name="installation_cost" id="installation_cost" min="1" readonly>
 										</div>
 									
 								    </div>
@@ -478,7 +478,7 @@
 									
 										<div class="col-md-4">
 												<label for="total_cost">Total cost: </label>
-												<input required type="number" value=""class="form-control" name="total_cost" id="total_cost" min="1" readonly>
+												<input value=""class="form-control" name="total_cost" id="total_cost" min="1" readonly>
 										</div>
 									</div>
 								</div><br><br>
@@ -630,6 +630,7 @@
 		<!-- QUOTE SCRIPTS-->
 		<script src='assets/js/hide_and_show.js'></script>
 		<script src='assets/js/quote_form.js'></script>
+		<script src='assets/js/numeral.min.js'></script>
 	
 
 	</body>
