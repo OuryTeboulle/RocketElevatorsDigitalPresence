@@ -393,6 +393,9 @@ function commercialQuote() {
     numeralexceliumCostCommercial = numeral(standardCostCommercial).format(	'0,0[.]00 $');
     numeralexceliumInstallationCostCommercial = numeral(standardInstallationCommercial).format(	'0,0[.]00 $');
     numeralexceliumTotalCostCommercial = numeral(standardTotalCostCommercial).format(	'0,0[.]00 $');
+
+    /* FILL FIELDS MESSAGE LAUNCHER - COMMERCIAL */
+
     } else {
             if (commercialElevator =="")
             document.getElementsByClassName('alert')[0].style.display = 'block';
@@ -465,7 +468,10 @@ function residentialQuote() {
     numeralexceliumCostResidential = numeral(exceliumCostResidential).format(	'0,0[.]00 $');
     numeralexceliumInstallationCostResidential = numeral(exceliumInstallationCostResidential).format(	'0,0[.]00 $');
     numeralexceliumTotalCostResidential = numeral(exceliumTotalCostResidential).format(	'0,0[.]00 $');
-} else {
+
+    /* FILL FIELDS MESSAGE LAUNCHER - RESIDENTIAL */
+
+    } else {
 
       if (x == "")
       document.getElementsByClassName('alert')[0].style.display = 'block';
@@ -539,7 +545,11 @@ function corporateQuote() {
     numeralexceliumCostCorporate = numeral(exceliumCostCorporate).format(	'0,0[.]00 $');
     numeralexceliumInstallationCostCorporate = numeral(exceliumInstallationCostCorporate).format(	'0,0[.]00 $');
     numeralexceliumTotalCostCorporate = numeral(exceliumTotalCostCorporate).format(	'0,0[.]00 $');
-} else {
+
+    /* FILL FIELDS MESSAGE LAUNCHER - CORPORATE */       
+
+    } else {
+
     if (occupantsCorporate =="")
     document.getElementsByClassName('alert')[0].style.display = 'block';
 
@@ -615,7 +625,11 @@ function hybridQuote() {
     numeralexceliumCostHybrid = numeral(exceliumCostHybrid).format(	'0,0[.]00 $');
     numeralexceliumInstallationCostHybrid = numeral(exceliumInstallationCostHybrid).format(	'0,0[.]00 $');
     numeralexceliumTotalCostHybrid = numeral(exceliumTotalCostHybrid).format(	'0,0[.]00 $');
-} else {
+
+    /* FILL FIELDS MESSAGE LAUNCHER - EXCELIUM */   
+
+    } else {
+        
     if (occupantsHybrid =="")
     document.getElementsByClassName('alert')[0].style.display = 'block';
 
