@@ -3,6 +3,7 @@ $(document).ready(function() {
     document.getElementById('commercialSelect').style.display = 'none';
     document.getElementById('corporateSelect').style.display = 'none';
     document.getElementById('hybridSelect').style.display = 'none';
+    document.getElementsByClassName('alert')[0].style.display = 'none';
 })
 var type;
 function choice() {
@@ -34,3 +35,5 @@ function choice() {
         document.getElementById('hybridSelect').style.display = 'none';
     }
 }
+
+

@@ -26,7 +26,8 @@
 		<!-- THEME CSS -->
 		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
-		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" 
+		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/AlertForm.css" rel="stylesheet" type="text/css" />
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
@@ -245,11 +246,18 @@
 
 										<div class="col-md-4">
 											<br><br>
-											<input type="reset" value="reset your selections">
+											<input type="reset" value="reset your selections" onclick='closeAlert()'>
 										</div>
 
 									</div><br>
-									<hr /><br>
+									<hr />
+									
+									<div class="alert">
+										<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+										<strong>Please fill in all the required fields.
+									  </div>
+									
+									<br>
 							
 									
 
@@ -462,7 +470,7 @@
 										</div>
 
 										<div class="col-md-4">
-												<label for="elevator_cost">Elevators_cost </label>
+												<label for="elevator_cost">Elevators cost: </label>
 							                    <input value="" class="form-control" name="elevator_cost" id="elevator_cost" min="1" readonly>
 										</div>
 
